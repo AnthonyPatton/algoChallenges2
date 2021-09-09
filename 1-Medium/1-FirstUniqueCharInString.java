@@ -24,6 +24,6 @@ class Solution {
       }
     }
 
-    return min == Integer.MAX_VALUE ? -1 : min;
+    return min == Integer.MAX_VALUE ? -1 : mi
   }
 }
