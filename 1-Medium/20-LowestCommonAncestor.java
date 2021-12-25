@@ -38,5 +38,22 @@
     if (tree == null) return null;
     if (tree.equals(n)) {
       Stack<Node> s = new Stack<Node>();
+      s.push(tree);
+      return s;
     }
+
+    Stack<Node> left = pathTo(tree.left, n);
+    Stack<Node> right = pathTo(tree.right, n);
+
+    if (left != null) {
+      left.push(tree);
+      return left;
+    }
+
+    if (right != null) {
+      right.push(tree);
+      return right;
+    }
+
+    return null;
   }
